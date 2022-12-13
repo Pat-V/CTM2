@@ -1,0 +1,33 @@
+{
+  "name": "ctm",
+  "version": "1.0.0",
+  "description": "Clinical Trial Management",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cls && node server.js",
+    "watch": "cls && nodemon server.js",
+    "front": "cls && cd front && npm start",
+    "build": "cls && cd front && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pat-V/CTM.git"
+  },
+  "author": "Patrice Vitté",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pat-V/CTM/issues"
+  },
+  "homepage": "https://github.com/Pat-V/CTM#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "react-pdf": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

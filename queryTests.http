@@ -1,0 +1,3 @@
+// REST Client plugin has to be installed for using below tests of backend routes and queries
+
+GET http://localhost:8018/CT

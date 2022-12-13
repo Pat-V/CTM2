@@ -1,0 +1,37 @@
+[
+    {
+        "studyID": "1",
+        "physicianID": "1",
+        "patientID": "1"
+    },
+    {
+        "studyID": "1",
+        "physicianID": "1",
+        "patientID": "2"
+    },
+    {
+        "studyID": "2",
+        "physicianID": "2",
+        "patientID": "3"
+    },
+    {
+        "studyID": "2",
+        "physicianID": "2",
+        "patientID": "4"
+    },
+    {
+        "studyID": "2",
+        "physicianID": "2",
+        "patientID": "5"
+    },
+    {
+        "studyID": "3",
+        "physicianID": "3",
+        "patientID": "6"
+    },
+    {
+        "studyID": "3",
+        "physicianID": "3",
+        "patientID": "7"
+    }
+]

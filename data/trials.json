@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "title": "Molecule W extension",
+        "description": "This study to evaluate a possible extension for W to increase healing rate about headache",
+        "startDate": "1/12/2022 00:00:00",
+        "endDate": "31/3/2023 00:00:00",
+        "NBPhysicians": "2",
+        "NBPatients": "2"
+    },
+    {
+        "id": "2",
+        "title": "Vaccine X",
+        "description": "Evaluate healing rate of a new vaccine candidate",
+        "startDate": "17/10/2022 00:00:00",
+        "endDate": "1/12/2022 00:00:00",
+        "NBPhysicians": "3",
+        "NBPatients": "3"
+    },
+    {
+        "id": "3",
+        "title": "Drug Y assimilation",
+        "description": "Verify patient do not vomit after injection",
+        "startDate": "13/12/2022 00:00:00",
+        "endDate": "15/1/2023 00:00:00",
+        "NBPhysicians": "2",
+        "NBPatients": "2"
+    },
+    {
+        "id": "4",
+        "title": "Drug Y 2nd study",
+        "description": "Ensure no reject is noticed anymore",
+        "startDate": "16/2/2023 00:00:00",
+        "endDate": "30/5/2023 00:00:00",
+        "NBPhysicians": "0",
+        "NBPatients": "0"
+    },
+    {
+        "id": "5",
+        "title": "Drug Y 3rd study for side effect",
+        "description": "Improvment for to those who have swollen feet",
+        "startDate": "1/1/2023 00:00:00",
+        "endDate": "31/10/2023 00:00:00",
+        "NBPhysicians": "0",
+        "NBPatients": "0"
+    },
+    {
+        "id": "6",
+        "title": "Vaccine Z",
+        "description": "Improvment increasing healing rate for dengue fever",
+        "startDate": "31/7/2023 00:00:00",
+        "endDate": "31/3/2024 00:00:00",
+        "NBPhysicians": "0",
+        "NBPatients": "0"
+    }
+]

@@ -11,9 +11,13 @@ export default function Login() {
 
   const HandleSubmit = async (e) => {
     e.preventDefault()
-    const data = await  window.fetch(`/login:${name}`)
+    const data = await  fetch(`/login`,{
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({"name": name})
+    })
     const json = await data.json()
-
+    
     if (json.userID !== 'Not found') {
       localStorage.setItem('CTM_UserID', json.userID)
       localStorage.setItem('CTM_UserName', json.name)

@@ -12,7 +12,6 @@ export default function Patients() {
   }
 
   const ListAllPatients = async () =>{
-    console.log('miou')
       const data = await  window.fetch('/Patients')
       console.log(data)
       const json = await data.json()

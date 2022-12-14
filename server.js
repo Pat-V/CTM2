@@ -10,18 +10,26 @@ const physiciansRoute = require('./routes/physicians.js')
 const patientsRoute =   require('./routes/patients.js')
 
 
-
-
-let dbConf = {
-    host: "192.168.1.39",
+const connection = mySQL.createConnection({
+    host: "192.168.1.26",
     user: "root",
     password: "MS830nol",
-    database: 'CTM',
-    port: '3366'
-}
-let connection = mySQL.createConnection(dbConf)
-console.log("we are connected")
-
+    database: "ctm",
+  });
+  
+  connection.connect((err) => {
+    if (err) {
+      console.error("Error connecting to the database:", err);
+      return;
+    }
+    console.log("Connected to the database.");
+    console.log(connection.config);
+  });
+  
+  connection.query("select * from ctm.users;", (err, data) => {
+    console.log(err);
+    console.log(data);
+  });
 
 
 const app = express()

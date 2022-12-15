@@ -7,7 +7,7 @@ const loginRoute       = require('./routes/login.js')
 const CT_Route         = require('./routes/clinicalTrials.js')
 const physiciansRoute  = require('./routes/physicians.js')
 const patientsRoute    = require('./routes/patients.js')
-const authorisedUser   = require('./routes/authorisedUser.js')
+const authorizedUser   = require('./routes/authorizedUser.js')
 
 const app = express()
       .use(express.json())
@@ -16,7 +16,7 @@ const app = express()
       .use('/physicians', physiciansRoute)
       .use('/patients', patientsRoute)
       .use('/AddPatient', patientsRoute)
-      .use('/authorisedUser',authorisedUser)
+      .use('/authorizedUser',authorizedUser)
       .listen(PORT, () => {console.log(`Hi, server is launched on port: ${PORT}`)})
 
 

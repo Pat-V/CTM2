@@ -5,7 +5,7 @@ const router = express.Router()
       .use(express.json())
 
 
-router.post('/authorizedUser', (req, res) => {
+router.post('/', (req, res) => {
     const name = JSON.stringify(req.body.name)
     const key = JSON.stringify(req.body.key)
     let dataToReturn = {}

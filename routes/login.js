@@ -24,7 +24,7 @@ router.post('/login', (req, res) => {
                 dataToReturn = iterator
                 break
             }
-            dataToReturn.key = jwt.sign(dataToReturn, SECRET_KEY)
+            dataToReturn.key = jwt.sign(name, SECRET_KEY)
             const key = dataToReturn.key
             connection.query(`UPDATE users SET users.key = "${key}" WHERE (((users.name)=${name}));`)
             res.send(dataToReturn)

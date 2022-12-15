@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
-import AuthorisedUser from "../components/AuthorisedUser"
+import AuthorizedUser from "../components/AuthorizedUser"
 
 export default function Trials() {
-  const itsOK = AuthorisedUser()
-  console.log('authorised?', itsOK)
+  const itsOK = AuthorizedUser()
+  console.log("on est ok?", itsOK);
 
   const [trialsInfo, setTrialsInfo] = useState()
   const message = localStorage.getItem('CTM_WelcomeMessage')

@@ -1,13 +1,10 @@
 
 
-export default async function AuthorisedUser() {
-    
-  
-    
+export default async function AuthorizedUser() {
     const name = localStorage.getItem('CTM_UserName')
     const key = localStorage.getItem('CTM_UserKey')
     if (key === ""){
-      return false
+      localStorage.setItem('CTM_logedIn', false)
     }
     const data = await fetch("/authorizedUser",{
         method: 'POST',
@@ -15,7 +12,14 @@ export default async function AuthorisedUser() {
         body: JSON.stringify({"name": name, "key": key})
       })
       const json = await data.json()
-      console.log("json: ", json)
+      
+    if (json.key ===  key) {
+      console.log("Youpi l'aventure continue")
+      localStorage.setItem('CTM_logedIn', true)
+    } else {
+      console.log("Ah là il faut se reconnecter")
+      localStorage.setItem('CTM_logedIn', false)
+    }
     
     
 }

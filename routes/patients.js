@@ -1,14 +1,23 @@
 const express = require('express')
-const fs = require('fs')
 const router = express.Router()
-const patients = require('../data/patients.json')
+const connection = require('../data/mySQL.js')
 
+router.get('/', (_, res) => {
+    connection.query(`SELECT patients.* FROM patients;`, (err, data) => {
 
-router.get('/',   (_, res) => {res.json(patients)})
+        if (err) {
+            console.log(err)
+            return
+        } 
+        res.json(data)
+    })
+})
+
 
 router.post('/', (req, res) => {
     newRecord = req.body.data
     console.log("Hello backend")
+    
     //search for an available new id
     let newID = -1
     for (const iterator of patients) {

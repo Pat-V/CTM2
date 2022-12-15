@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
+import AuthorisedUser from "../components/AuthorisedUser"
 
 export default function Trials() {
+  const itsOK = AuthorisedUser()
+  console.log('authorised?', itsOK)
+
   const [trialsInfo, setTrialsInfo] = useState()
   const message = localStorage.getItem('CTM_WelcomeMessage')
   
@@ -9,8 +13,6 @@ export default function Trials() {
   function handleClick(id) {
     console.log(id)
   }
-
-
 
   const ListAllTrials = async () =>{
       const data = await  window.fetch('/CT')

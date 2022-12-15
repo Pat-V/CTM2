@@ -7,6 +7,7 @@ export default function NavBar() {
             <Link to='/Physicians'>Physicians</Link>
             <Link to='/Patients'>Patients</Link>
             <Link to='/About'>About</Link>
+            <Link to='/Help'>Help</Link>
             <Link to='/LogOut'>Logout</Link>
         </nav>
     )

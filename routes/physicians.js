@@ -1,9 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const physicians = require('../data/physicians.json')
+const connection = require('../data/mySQL.js')
 
+router.get('/', (_, res) => {
+    connection.query(`SELECT physicians.* FROM physicians;`, (err, data) => {
 
-router.get('/', (_, res) => {res.json(physicians)})
+        if (err) {
+            console.log(err)
+            return
+        } 
+        res.json(data)
+    })
+})
 
 
 module.exports = router

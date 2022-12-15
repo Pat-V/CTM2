@@ -1,0 +1,9 @@
+.ctm-rocket-coming-soon {
+    height: 65px;
+    width: 65px;
+}
+
+.help-alignment {
+    display: flex;
+    flex-direction: row;
+}

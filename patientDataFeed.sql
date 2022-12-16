@@ -1,0 +1,11 @@
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "George" AS Expr1, "Noice" AS Expr2, "45" AS Expr3, "75" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Jenny" AS Expr1, "Summer" AS Expr2, "45" AS Expr3, "75" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Kevin" AS Expr1, "Calahan" AS Expr2, "38" AS Expr3, "55" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "John" AS Expr1, "Artley" AS Expr2, "21" AS Expr3, "65" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Virginia" AS Expr1, "Del Rio" AS Expr2, "44" AS Expr3, "70" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Liliane" AS Expr1, "Giboin" AS Expr2, "32" AS Expr3, "54" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Joseh" AS Expr1, "Delaruelle" AS Expr2, "58" AS Expr3, "77" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Charles" AS Expr1, "Lefebvre" AS Expr2, "62" AS Expr3, "85" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Albert" AS Expr1, "Breu" AS Expr2, "61" AS Expr3, "65" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Gerrit" AS Expr1, "Cole" AS Expr2, "25" AS Expr3, "72" AS Expr4;
+INSERT INTO ctm.patients ( firstName, lastName, age, weight ) SELECT "Annegret" AS Expr1, "speck" AS Expr2, "26" AS Expr3, "73" AS Expr4;

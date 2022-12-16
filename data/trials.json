@@ -20,7 +20,7 @@
     {
         "id": "3",
         "title": "Drug Y assimilation",
-        "description": "Verify patient do not vomit after injection",
+        "description": "Verify patients do not vomit after injection",
         "startDate": "13/12/2022 00:00:00",
         "endDate": "15/1/2023 00:00:00",
         "NBPhysicians": "2",

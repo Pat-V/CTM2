@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Login() {
@@ -19,6 +19,7 @@ export default function Login() {
     const json = await data.json()
     
     if (json.userID !== 'Not found') {
+      localStorage.setItem('CTM_logedIn', true)
       localStorage.setItem('CTM_UserID', json.userID)
       localStorage.setItem('CTM_UserName', json.name)
       localStorage.setItem('CTM_UserRole', json.role)

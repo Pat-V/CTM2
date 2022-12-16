@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import AuthorizedUser from "../components/AuthorizedUser"
 
 export default function Patients() {
+  AuthorizedUser()
+  const isConnected = localStorage.getItem('CTM_logedIn')
+  const isPeopleManager = localStorage.getItem('CTM_UserRole') === 'PeopleManager'
   const navigate = useNavigate()
   const [patientInfo, setPatientInfo] = useState()
   const message = localStorage.getItem('CTM_WelcomeMessage')
@@ -17,7 +21,7 @@ export default function Patients() {
       const json = await data.json()
       setPatientInfo(json)
   }
-  useEffect(() =>  {ListAllPatients()},[])
+  useEffect(() =>  {ListAllPatients()},[isConnected])
   
 return (
     <>
@@ -34,23 +38,31 @@ return (
               <th scope="col">Weight</th>
             </tr>
           </thead>
-          <tbody>
-            {(patientInfo && 
-              patientInfo.map((patient) => (
-                <tr>
-                  <th scope="row">{patient.id}</th>
-                  <td>{patient.firstName}</td>
-                  <td>{patient.lastName}</td>
-                  <td>{patient.age}</td>
-                  <td>{patient.weight}</td>
-                </tr>
-              ))
-            )}
-          </tbody>
+          {isPeopleManager ?
+              <tbody>
+                {(patientInfo && 
+                  patientInfo.map((patient) => (
+                    <tr>
+                      <th scope="row">{patient.id}</th>
+                      <td>{patient.firstName}</td>
+                      <td>{patient.lastName}</td>
+                      <td>{patient.age}</td>
+                      <td>{patient.weight}</td>
+                    </tr>
+                  ))
+                )}
+              </tbody>
+          :
+          <></>
+          }
         </table>
-        <button onClick={HandleAddPatient}>
-          Add a new patient
-        </button>
+        {isPeopleManager ?
+            <button onClick={HandleAddPatient}>
+              Add a new patient
+            </button>
+        :
+        <></>
+        }
       </section>
     </>
   );

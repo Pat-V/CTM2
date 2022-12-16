@@ -1,5 +1,6 @@
 const express = require('express')
 require('dotenv').config()
+const path = require('path')
 
 const PORT    = process.env.PORT || 1880
 
@@ -16,7 +17,10 @@ const app = express()
       .use('/physicians', physiciansRoute)
       .use('/patients', patientsRoute)
       .use('/AddPatient', patientsRoute)
+      .use('/AddPhysician', physiciansRoute)
       .use('/authorizedUser',authorizedUser)
+      .use(express.static('front/build'))
+      .get('/*', (_, res) =>{res.sendFile(path.join(__dirname, './front/build/index.html'))})
       .listen(PORT, () => {console.log(`Hi, server is launched on port: ${PORT}`)})
 
 
@@ -29,9 +33,6 @@ const app = express()
     
 
 /*
-const path = require('path')
-app.use(express.static('front/build'))
-app.get('/*', (_, res) =>{
-    res.sendFile(path.join(__dirname, './front/build/index.html'))
-})
+
+
 */

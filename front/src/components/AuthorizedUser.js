@@ -17,7 +17,7 @@ export default async function AuthorizedUser() {
       console.log("Youpi l'aventure continue")
       localStorage.setItem('CTM_logedIn', true)
     } else {
-      console.log("Ah là il faut se reconnecter")
+      console.log("Ah là il faut se connecter")
       localStorage.setItem('CTM_logedIn', false)
     }
     

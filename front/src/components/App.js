@@ -11,6 +11,7 @@ import Help from '../pages/Help';
 import LogOut from '../pages/LogOut.js';
 import PageNotFound from '../pages/PageNotFound.js'
 import PatientAdd from '../pages/PatientAdd';
+import PhysicianAdd from '../pages/PhysicianAdd';
 
 export default function App() {
   window.onbeforeunload = () => {
@@ -29,6 +30,7 @@ export default function App() {
           <Route path = 'logout' element={<LogOut />} />
           <Route path = '*' element={<PageNotFound />} />
           <Route path = 'AddPatient' element={<PatientAdd />} />
+          <Route path = 'AddPhysician' element={<PhysicianAdd />} />
         </Route>
       </Routes>
       <footer className='footer'  > © 2022/22  -  CTM  -  contact: patrice.vitte@efrei.net </footer>
